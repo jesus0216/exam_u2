@@ -35,6 +35,14 @@ class _BranchMapPageState extends State<BranchMapPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Mapa de sucursal'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.home),
+            onPressed: () {
+              Navigator.pop(context); // 
+            },
+          ),
+        ],
       ),
       body: GoogleMap(
         initialCameraPosition: _initialCamera,
